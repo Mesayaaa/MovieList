@@ -11,10 +11,10 @@ import {
   Settings,
   X
 } from 'lucide-react';
-import { Movie } from '../data/movies';
+import { Show } from '../types';
 
 interface VideoPlayerProps {
-  movie: Movie;
+  movie: Show;
   onClose: () => void;
   userSubscription: 'free' | 'basic' | 'premium';
 }
@@ -205,8 +205,8 @@ export function VideoPlayer({ movie, onClose, userSubscription }: VideoPlayerPro
         {/* Top Bar */}
         <div className="absolute top-0 left-0 right-0 p-6 flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-white">{movie.title}</h1>
-            <p className="text-gray-300 text-sm">{movie.year} • {movie.genre} • {movie.duration}</p>
+            <h1 className="text-2xl font-bold text-white">{movie.name}</h1>
+            <p className="text-gray-300 text-sm">{movie.premiered ? new Date(movie.premiered).getFullYear() : ''} • {movie.genres.join(', ')} • {movie.runtime} min</p>
           </div>
           <button
             onClick={onClose}

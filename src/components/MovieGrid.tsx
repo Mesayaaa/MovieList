@@ -1,12 +1,12 @@
 import React from 'react';
 import { MovieCard } from './MovieCard';
-import { Movie } from '../data/movies';
+import { Show } from '../types';
 
 interface MovieGridProps {
-  movies: Movie[];
-  onWatchMovie: (movie: Movie) => void;
-  onToggleWatchlist: (movieId: string) => void;
-  watchlist: string[];
+  movies: Show[];
+  onWatchMovie: (movie: Show) => void;
+  onToggleWatchlist: (movieId: number) => void;
+  watchlist: number[];
   title: string;
 }
 
@@ -16,7 +16,7 @@ export function MovieGrid({ movies, onWatchMovie, onToggleWatchlist, watchlist, 
       <div className="mb-12">
         <h2 className="text-2xl font-bold text-white mb-6">{title}</h2>
         <div className="text-center py-12">
-          <p className="text-gray-400 text-lg">No movies found matching your criteria.</p>
+          <p className="text-gray-400 text-lg">No shows found matching your criteria.</p>
         </div>
       </div>
     );

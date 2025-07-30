@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { User, Mail, Settings, CreditCard, History, Heart } from 'lucide-react';
-import { User as UserType } from '../App';
+import { User as UserType } from '../types';
 
 interface UserProfileProps {
   user: UserType;

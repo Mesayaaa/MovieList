@@ -1,27 +1,34 @@
 import React, { useState } from 'react';
 import { Play, Plus, Check, Star } from 'lucide-react';
-import { Movie } from '../data/movies';
+import { Show } from '../types';
 
 interface MovieCardProps {
-  movie: Movie;
-  onWatch: (movie: Movie) => void;
-  onToggleWatchlist: (movieId: string) => void;
+  movie: Show;
+  onWatch: (movie: Show) => void;
+  onToggleWatchlist: (movieId: number) => void;
   isInWatchlist: boolean;
 }
 
+const FALLBACK_IMAGE = "https://static.tvmaze.com/images/no-img/no-img-portrait-text.png";
+
 export function MovieCard({ movie, onWatch, onToggleWatchlist, isInWatchlist }: MovieCardProps) {
   const [isHovered, setIsHovered] = useState(false);
+
+  const imageUrl = movie.image?.medium || FALLBACK_IMAGE;
+  const year = movie.premiered ? new Date(movie.premiered).getFullYear() : 'N/A';
+  const rating = movie.rating?.average || 'N/A';
 
   return (
     <div 
       className="relative group cursor-pointer transform transition-transform duration-300 hover:scale-105"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={() => onWatch(movie)}
     >
       <div className="relative overflow-hidden rounded-lg bg-gray-800">
         <img
-          src={movie.poster}
-          alt={movie.title}
+          src={imageUrl}
+          alt={movie.name}
           className="w-full aspect-[2/3] object-cover transition-transform duration-300 group-hover:scale-110"
         />
         
@@ -30,15 +37,15 @@ export function MovieCard({ movie, onWatch, onToggleWatchlist, isInWatchlist }: 
         }`}>
           <div className="absolute bottom-0 left-0 right-0 p-4">
             <h3 className="text-white font-semibold text-sm mb-2 line-clamp-2">
-              {movie.title}
+              {movie.name}
             </h3>
             
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center space-x-1">
                 <Star className="h-3 w-3 text-yellow-400 fill-current" />
-                <span className="text-xs text-gray-300">{movie.rating}</span>
+                <span className="text-xs text-gray-300">{rating}</span>
               </div>
-              <span className="text-xs text-gray-300">{movie.year}</span>
+              <span className="text-xs text-gray-300">{year}</span>
             </div>
             
             <div className="flex items-center space-x-2">
