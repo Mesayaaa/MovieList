@@ -51,8 +51,9 @@ function App() {
     }
   }, [searchQuery, selectedGenre]);
 
-  const handleLogin = (email: string, password: string) => {
+  const handleLogin = (email: string) => {
     // Demo login - in production, this would authenticate with backend
+    // The password parameter was removed as it was unused.
     const user: User = {
       id: Date.now().toString(),
       email,

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Search, Filter } from 'lucide-react';
-import { LoadingSpinner } from './LoadingSpinner';
 
 interface SearchBarProps {
   searchQuery: string;

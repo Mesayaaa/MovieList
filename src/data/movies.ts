@@ -10,6 +10,8 @@ export interface Movie {
   trailer?: string;
 }
 
+const TRAILER_URL = 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
+
 export const movies: Movie[] = [
   {
     id: '1',
@@ -19,7 +21,8 @@ export const movies: Movie[] = [
     year: 2024,
     genre: 'Sci-Fi',
     rating: '8.5',
-    duration: '2h 28m'
+    duration: '2h 28m',
+    trailer: TRAILER_URL,
   },
   {
     id: '2',
@@ -29,7 +32,8 @@ export const movies: Movie[] = [
     year: 2024,
     genre: 'Thriller',
     rating: '7.8',
-    duration: '1h 56m'
+    duration: '1h 56m',
+    trailer: TRAILER_URL,
   },
   {
     id: '3',
@@ -39,7 +43,8 @@ export const movies: Movie[] = [
     year: 2023,
     genre: 'Action',
     rating: '8.9',
-    duration: '2h 15m'
+    duration: '2h 15m',
+    trailer: TRAILER_URL,
   },
   {
     id: '4',
@@ -49,7 +54,8 @@ export const movies: Movie[] = [
     year: 2023,
     genre: 'Romance',
     rating: '8.2',
-    duration: '1h 48m'
+    duration: '1h 48m',
+    trailer: TRAILER_URL,
   },
   {
     id: '5',
@@ -59,7 +65,8 @@ export const movies: Movie[] = [
     year: 2024,
     genre: 'Documentary',
     rating: '9.1',
-    duration: '1h 32m'
+    duration: '1h 32m',
+    trailer: TRAILER_URL,
   },
   {
     id: '6',
@@ -69,7 +76,8 @@ export const movies: Movie[] = [
     year: 2024,
     genre: 'Comedy',
     rating: '7.5',
-    duration: '1h 42m'
+    duration: '1h 42m',
+    trailer: TRAILER_URL,
   },
   {
     id: '7',
@@ -79,7 +87,8 @@ export const movies: Movie[] = [
     year: 2023,
     genre: 'Horror',
     rating: '7.3',
-    duration: '1h 38m'
+    duration: '1h 38m',
+    trailer: TRAILER_URL,
   },
   {
     id: '8',
@@ -89,7 +98,8 @@ export const movies: Movie[] = [
     year: 2024,
     genre: 'Family',
     rating: '8.0',
-    duration: '1h 52m'
+    duration: '1h 52m',
+    trailer: TRAILER_URL,
   },
   {
     id: '9',
@@ -99,7 +109,8 @@ export const movies: Movie[] = [
     year: 2023,
     genre: 'Drama',
     rating: '8.7',
-    duration: '2h 8m'
+    duration: '2h 8m',
+    trailer: TRAILER_URL,
   },
   {
     id: '10',
@@ -109,7 +120,8 @@ export const movies: Movie[] = [
     year: 2024,
     genre: 'Sci-Fi',
     rating: '8.3',
-    duration: '2h 1m'
+    duration: '2h 1m',
+    trailer: TRAILER_URL,
   },
   {
     id: '11',
@@ -119,7 +131,8 @@ export const movies: Movie[] = [
     year: 2024,
     genre: 'Romance',
     rating: '7.9',
-    duration: '1h 44m'
+    duration: '1h 44m',
+    trailer: TRAILER_URL,
   },
   {
     id: '12',
@@ -129,7 +142,8 @@ export const movies: Movie[] = [
     year: 2023,
     genre: 'Action',
     rating: '7.6',
-    duration: '1h 58m'
+    duration: '1h 58m',
+    trailer: TRAILER_URL,
   },
   {
     id: '13',
@@ -139,7 +153,8 @@ export const movies: Movie[] = [
     year: 2024,
     genre: 'Comedy',
     rating: '7.4',
-    duration: '1h 36m'
+    duration: '1h 36m',
+    trailer: TRAILER_URL,
   },
   {
     id: '14',
@@ -149,7 +164,8 @@ export const movies: Movie[] = [
     year: 2024,
     genre: 'Documentary',
     rating: '9.0',
-    duration: '1h 28m'
+    duration: '1h 28m',
+    trailer: TRAILER_URL,
   },
   {
     id: '15',
@@ -159,6 +175,7 @@ export const movies: Movie[] = [
     year: 2023,
     genre: 'Horror',
     rating: '7.2',
-    duration: '1h 45m'
+    duration: '1h 45m',
+    trailer: TRAILER_URL,
   }
 ];

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, User, Settings, LogOut, Play, CreditCard } from 'lucide-react';
+import { User, LogOut, Play } from 'lucide-react';
 import { User as UserType } from '../App';
 
 interface NavigationProps {
